@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyPress</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #display {
+            color: darkolivegreen;
+        }
+
+        #input-box {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="display"></h1>
+        <input id="input-box" type="text" placeholder="Type here..." />
+    </div>
+    <script>
+        let inputBox = document.getElementById('input-box')
+        let display = document.getElementById('display')
+
+        inputBox.addEventListener('keypress', function (e) {
+            display.innerText = "you have Pressed " + e.key
+        });
+
+    </script>
+</body>
+
+</html>
